@@ -1,0 +1,167 @@
+MySQL:
+  enabled: false
+  host: 'localhost'
+  database: 'db'
+  username: 'user'
+  password: 'pass'
+  port: 3306
+
+Settings:
+  command: mining
+  aliases: [mina, minas, minerar]
+  admin-permission: mining.admin
+  save-interval: 600 # em segundos
+  rewards-interval: 30 # a cada quantos segundos vai entregar as recompensas
+  upgrade-chance: 0.1 # quantos % de chance o jogador vai ter de upar um encantamento por bloco
+  throw-cooldown: 30 # em segundos
+  reward-separator: ' &8| '
+
+ActionBars:
+  general-bar: '&6&l▶ {rewards} &8| &e+{blocks} ❒ &6&l◀'
+
+Titles:
+  upgrade-pickaxe:
+    title: '&6&lUP!'
+    subtitle: '&fSua picareta evoluiu &6+1 &fnível!'
+
+Messages:
+  max-level: '&6&lVoltz&f&lMC &8&l➜ &cSua picareta já está no nível máximo!'
+  invalid-amount: '&6&lVoltz&f&lMC &8&l➜ &cA quantia informada é inválida!'
+  insufficient-blocks: '&6&lVoltz&f&lMC &8&l➜ &cVocê não possui blocos suficientes! ({has}/{need})'
+  need-space: '&6&lVoltz&f&lMC &8&l➜ &cVocê não possui espaço suficiente no seu inventário! ({has}/{need})'
+  choose-amount:
+    - ''
+    - '&6&lVoltz&f&lMC &8&l➜ &7Digite no chat quantos itens deseja comprar!'
+    - ''
+    - ' &8▶ &7Comprando: &f{item}'
+    - ' &8▶ &7Preço: &f{price} &e❒'
+    - ''
+  successful-purchased:
+    - ''
+    - '&6&lVoltz&f&lMC &8&l➜ &7Compra efetuada com sucesso!'
+    - ''
+    - ' &8▶ &7Item adquirido: &f{item}'
+    - ' &8▶ &7Quantia: &fx{amount}'
+    - ' &8▶ &7Preço: &f{price} &e❒'
+    - ''
+  throw-cooldown: '&6&lVoltz&f&lMC &8&l➜ &cAguarde {cooldown} para arremessar sua picareta novamente!'
+
+Next-Page:
+  type: ARROW
+  name: '&aPróxima Página'
+
+Previous-Page:
+  type: ARROW
+  name: '&cPágina Anterior'
+
+Regions:
+  mine:
+    - 'mina'
+  ores:
+    - 'minerios'
+
+Pickaxe:
+  type: DIAMOND_PICKAXE
+  glow: true
+  name: '&7Picareta &8- &6&lOverpower'
+  lore:
+    - '&7Eficiência: &f∞'
+    - '&7Inquebrável: &f∞'
+    - '&7Fortuna: &f{loot_bonus_blocks}'
+    - '&7Super Área: &f{super_area}'
+    - '&7Thunder: &f{thunder}'
+    - '&7Arremesso: &f{throw}'
+  enchants:
+    - 'DIG_SPEED,10000'
+    - 'DURABILITY,10000'
+
+Upgraders:
+  1:
+    type: PLAYER_HEAD
+    owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWQ1YTA5ODg0Y2I4M2VmNWM5MDhkZGRkMzg1ZjI0NmZlZmRlZTIyMTcxMmMwMTAxNzdmNTQzNzZkYTIzOGZkZCJ9fX0=
+    name: "&bEvoluir Picareta &7[&f+{upgrade}&7] &7(Botão direito)"
+    lore:
+      - '&7Ative esse item para evoluir todos'
+      - '&7encantamentos da sua picareta'
+      - '&7em &f{upgrade} &7níveis!'
+    upgrade: 5
+  2:
+    type: PLAYER_HEAD
+    owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODNlZDRjZTIzOTMzZTY2ZTA0ZGYxNjA3MDY0NGY3NTk5ZWViNTUzMDdmN2VhZmU4ZDkyZjQwZmIzNTIwODYzYyJ9fX0=
+    name: "&5Evoluir Picareta &7[&f+{upgrade}&7] &7(Botão direito)"
+    lore:
+      - '&7Ative esse item para evoluir todos'
+      - '&7encantamentos da sua picareta'
+      - '&7em &f{upgrade} &7níveis!'
+    upgrade: 15
+  3:
+    type: PLAYER_HEAD
+    owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGY3NDY3YzVmNzM4YzY0MTI0NmMwOWY4Y2U3OTFlMzM5YTg2ZTgxZGU2MjA0OWI0MWY0OTI4ODgxNzJmYTcyNiJ9fX0=
+    name: "&dEvoluir Picareta &7[&f+{upgrade}&7] &7(Botão direito)"
+    lore:
+      - '&7Ative esse item para evoluir todos'
+      - '&7encantamentos da sua picareta'
+      - '&7em &f{upgrade} &7níveis!'
+    upgrade: 25
+
+Enchants:
+  LOOT_BONUS_BLOCKS:
+    max-level: 1000
+    initial-level: 0
+  SUPER_AREA:
+    max-level: 100
+    increase-per-level: 0.5 # chance aumentada a cada nível
+    initial-level: 0
+  THUNDER:
+    max-level: 100
+    increase-per-level: 0.5 # chance aumentada a cada nível
+    initial-level: 0
+  THROW:
+    max-level: 50
+    increase-per-level: 1 # distância aumentada a cada nível
+    initial-level: 0
+
+Blocks:
+  LAPIS_ORE:
+    rewards:
+      - 'money,2500'
+      - 'gems,250'
+      - 'exp,25'
+
+Rewards:
+  money:
+    display: '&e+{amount} ⛃'
+    commands:
+      - 'money give {player} {amount}'
+  gems:
+    display: '&5+{amount} ✦'
+    commands:
+      - 'gems give {player} {amount}'
+  exp:
+    display: '&6+{amount} ⏦'
+    commands:
+      - 'expadmin give {player} {amount}'
+
+Time-Formatter:
+  second: segundo
+  seconds: segundos
+  minute: minuto
+  minutes: minutos
+  hour: hora
+  hours: horas
+  day: dia
+  days: dias
+  now: 1 segundo
+
+Number-Formatter:
+  - "k"
+  - "M"
+  - "B"
+  - "T"
+  - "Q"
+  - "QQ"
+  - "S"
+  - "SS"
+  - "O"
+  - "N"
+  - "D"

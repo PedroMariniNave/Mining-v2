@@ -1,0 +1,19 @@
+Inventory:
+  title: "Mineração - Loja"
+  size: 45
+  item-slots: 11,12,13,14,15,20,21,22,23,24,29,30,31,32,33
+  next-page-slot: 26 # só vai aparecer se tiver próxima página
+  previous-page-slot: 18 # só vai aparecer se tiver página anterior
+  items:
+    1:
+      price: 25
+      display:
+        type: EMERALD
+        name: '&2Esmeralda'
+        lore:
+          - '&7Preço: &f{price} &e❒'
+      shop-item:
+        type: EMERALD
+        name: '&2Esmeralda'
+        lore:
+          - '&7Wooow esmeralda'

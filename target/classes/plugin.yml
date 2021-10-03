@@ -1,0 +1,6 @@
+name: Mining
+description: Only a simple mining plugin.
+version: 2.0
+api-version: 1.16
+author: zPedroo_
+main: com.zpedroo.voltzmining.VoltzMining
